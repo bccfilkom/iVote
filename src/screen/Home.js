@@ -124,7 +124,7 @@ export default class Home extends Component {
                 LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
                 this.setState({
                     validated: true,
-                    nama:response.bio.nama,
+                    nama:response.nama,
                 })
 
                               
@@ -211,7 +211,7 @@ export default class Home extends Component {
                     <Text style={styles.votingName}>{this.state.nama}</Text>
                     <Text style={styles.votingText}>Tentukan Pilihanmu Demi {"\n"}Kelanjutan Angkatan 2016</Text>
                     <View style={{marginTop:30,flexDirection: 'row', justifyContent:'space-between'}}>
-                        <VoteCanvas clr={this.state.clr0} vote={0} changeVote={this.changeVote} nama={"Ahmad Nisbah Faiz" }source={require("../assets/2.jpg")}/>
+                        <VoteCanvas clr={this.state.clr0} vote={0} changeVote={this.changeVote} nama={"Ahmad Nisbah Faiz" }source={require("../assets/1.jpg")}/>
                         <VoteCanvas clr={this.state.clr1} vote={1} changeVote={this.changeVote} nama={"Anjas Pramono"} source={require("../assets/2.jpg")}/>
                     </View>
                     <SubmitButton voting={this.submitVote.bind(this)}/>
