@@ -7,7 +7,8 @@ import {
   Platform,
   UIManager,
   AsyncStorage,
-  LayoutAnimation
+  LayoutAnimation,
+  StatusBar
 } from 'react-native';
 
 
@@ -61,7 +62,13 @@ export default class Main extends Component {
   render() {
     if(this.state.loggedIn === false && this.state.loading == true ){
       return (
-          <View><Text>AgNJAY</Text></View>
+          <View>
+             <StatusBar
+                    backgroundColor="blue"
+                    barStyle="light-content"
+                    hidden={true}
+              />
+          </View>
         );
     } else if(this.state.loggedIn === false && this.state.loading == false){
         return (

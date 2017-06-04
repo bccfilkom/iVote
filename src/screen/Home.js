@@ -85,7 +85,12 @@ export default class Home extends Component {
                 ToastAndroid.show(response.msg, ToastAndroid.SHORT);
                 LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
                 this.setState({
-                    validated: false
+                    validated: false,
+                    nim:'',
+                    vote: 0,
+                    clr0: '#3A7AFF',
+                    clr1: '#3A7AFF'
+
                 })
                 
             })
