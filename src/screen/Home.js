@@ -102,11 +102,10 @@ export default class Home extends Component {
         if(this.state.nim !== ''){
             ToastAndroid.show('Loading..', ToastAndroid.SHORT);
 
-            fetch('http://45.32.115.11:13131/fetch/nim', {
+            fetch('http://45.32.115.11:1404/vote/check', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'x-access-token': this.state.accessToken,
                 },
                 body: JSON.stringify({
                 nim: this.state.nim,
